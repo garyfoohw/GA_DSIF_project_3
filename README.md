@@ -1,5 +1,5 @@
 # ![](https://awaypoint.files.wordpress.com/2015/08/christian-vs-atheist.jpg)
-The religious divide
+# The religious divide
 
 ### Background
 
