@@ -24,13 +24,15 @@ Finally, we pass the model through several classification models.
 
 ### Results
 
-|Model|ROC AUC score|
-|---|---|
-|Naive Bayes|80%|
-|Random Forest|82%|
-|XGBoost|83%|
+|Model|Vectorizer|ROC AUC score|
+|---|---|---|
+|Naive Bayes|CountVectorizer|81.2%|
+|Naive Bayes|TfidfVectorizer|82.6%|
+|Random Forest|TfidfVectorizer|83.5%|
+|XGBoost|TfidfVectorizer|83.1%|
 
 All 3 models learn rather well with Random Forest and XGBoost scoring rather closely.
+We choose XGBoost as the final model despite the slightly lower score due to its faster runtime performance.
 
 ### Recommendation and Conclusion
 
