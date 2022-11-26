@@ -30,7 +30,7 @@ Finally, we pass the model through several classification models.
 | Naive Bayes   | CountVectorizer | 81.2%         |
 | Naive Bayes   | TfidfVectorizer | 82.6%         |
 | Random Forest | TfidfVectorizer | 83.5%         |
-| XGBoost       | TfidfVectorizer | 83.1%         |
+| XGBoost       | TfidfVectorizer | 83.4%         |
 
 All 3 models learn rather well with Random Forest and XGBoost scoring rather closely.
 We choose XGBoost as the final model despite the slightly lower score due to its faster runtime performance.
