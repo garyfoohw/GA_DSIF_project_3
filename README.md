@@ -1,5 +1,6 @@
 # ![](https://awaypoint.files.wordpress.com/2015/08/christian-vs-atheist.jpg)
-# The religious divide
+
+# Keeping Religions Safe
 
 ### Background
 
@@ -11,7 +12,7 @@ In this manner, we can be sure that each individual groups can carry out their a
 
 ### Problem Statement
 
-A machine learning algorithm will be trained to identify natural speech of *Christians* (as a proxy for people with religion) vs *Aetheists*.
+A machine learning algorithm will be trained to identify natural speech of _Christians_ (as a proxy for people with religion) vs _Aetheists_.
 
 By studying the common topic / words of choice between these 2 groups of people, it is hoped that a model can identify one from the other.
 
@@ -24,12 +25,12 @@ Finally, we pass the model through several classification models.
 
 ### Results
 
-|Model|Vectorizer|ROC AUC score|
-|---|---|---|
-|Naive Bayes|CountVectorizer|81.2%|
-|Naive Bayes|TfidfVectorizer|82.6%|
-|Random Forest|TfidfVectorizer|83.5%|
-|XGBoost|TfidfVectorizer|83.1%|
+| Model         | Vectorizer      | ROC AUC score |
+| ------------- | --------------- | ------------- |
+| Naive Bayes   | CountVectorizer | 81.2%         |
+| Naive Bayes   | TfidfVectorizer | 82.6%         |
+| Random Forest | TfidfVectorizer | 83.5%         |
+| XGBoost       | TfidfVectorizer | 83.1%         |
 
 All 3 models learn rather well with Random Forest and XGBoost scoring rather closely.
 We choose XGBoost as the final model despite the slightly lower score due to its faster runtime performance.
@@ -38,6 +39,6 @@ We choose XGBoost as the final model despite the slightly lower score due to its
 
 It is recommended that this model be further tuned, since decision trees have many parameters that are tunable.
 Possible to also try other classifiers including Neural Network.
-Finally, the confusion matrix was not studied in the interest of time, and it would be prudent to study the precision, recall, and specificity too.
+Finally, the confusion matrix was not studied in-depth in the interest of time, and it would be prudent to study the precision, recall, and specificity too.
 
-In conclusion, we have built a model to learn natural text used by aethiests and christians through posts on Reddit. The ROC score achieved at least 80%.
+In conclusion, we have built a model to learn natural text used by aethiests and christians through posts on Reddit. The ROC score achieved at least 83% using a XGBoost Classifier.
